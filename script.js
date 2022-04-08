@@ -7,6 +7,23 @@ const numbersContainer = document.querySelector('.numbers-container');
 const plusBtn = document.getElementById('plus');
 const minusBtn = document.getElementById('minus');
 const multiplyBtn = document.getElementById('multiply');
-const devideBtn = document.getElementById('devide');
+const divideBtn = document.getElementById('divide');
 const equalsBtn = document.getElementById('equals');
 const numbersBtn = document.getElementById('number-btn');
+
+// OPERATIONS FUNCTIONS
+function addition(a, b) {
+    return a + b;
+}
+
+function substraction(a, b) {
+    return a - b;
+}
+
+function multiplication(a, b) {
+    return a * b;
+}
+
+function division(a, b) {
+    return a / b;
+}
