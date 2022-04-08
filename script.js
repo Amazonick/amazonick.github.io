@@ -36,4 +36,3 @@ function operate(num1, num2, operator) {
         return division(num1, num2)
     }
 }
-console.log(operate(2, 10, '/'))
