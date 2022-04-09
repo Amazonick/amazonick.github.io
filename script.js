@@ -9,7 +9,8 @@ const minusBtn = document.getElementById('minus');
 const multiplyBtn = document.getElementById('multiply');
 const divideBtn = document.getElementById('divide');
 const equalsBtn = document.getElementById('equals');
-const numbersBtn = document.getElementById('number-btn');
+const numbersBtns = document.querySelectorAll('.number-btn')
+
 
 // OPERATIONS FUNCTIONS
 function addition(a, b) {
