@@ -34,20 +34,6 @@ function clearDisplay() {
 }
 clearDisplay();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OPERATIONS FUNCTIONS
 function addition(a, b) {
     return a + b;
