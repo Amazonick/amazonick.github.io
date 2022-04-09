@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    height: 80px;
+    background-color: rgb(229, 228, 228);
+    padding: 10px;
+    direction: rtl;
+    font-size: 30px;
+}
