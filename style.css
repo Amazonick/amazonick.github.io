@@ -8,12 +8,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(44, 43, 43)
+}
+
+.main-container {
+    margin: 20px;
+    padding: 40px;
+    background: rgb(114, 160, 126)
 }
 
 .display {
+    display: flex;
     height: 80px;
-    background-color: rgb(229, 228, 228);
-    padding: 10px;
+    margin: 20px;
+    background-color: rgb(44, 43, 43);
     direction: rtl;
-    font-size: 30px;
+    font-size: 50px;
+    color: rgb(255, 255, 255)
+}
+
+#header-text {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 300px;
+    background-color: rgb(255, 255, 255)
 }
