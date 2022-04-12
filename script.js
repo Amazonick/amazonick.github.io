@@ -31,7 +31,7 @@ function multiplication(a, b) {
 }
 function division(a, b) {
     if (firstNumber === 0) {
-        return calculatorDisplay.textContent = 'You can\'t divide by zero bro. Haven\'t you learned that by now?'
+        calculatorDisplay.textContent = 'You can\'t divide by zero bro. Haven\'t you learned that by now?'
     } else
     return parseFloat(a / b);
 }
@@ -82,9 +82,6 @@ function operatorInput() {
             firstNumber = '';
             console.log('operator secondNumber: ', secondNumber);
             console.log('operator firstNumber: ', firstNumber);
-            if (operatorSelection === '=' && secondNumber === '') {
-                return calculatorDisplay.textContent = 'Enter a number first';
-            }
         })
         );
 }
@@ -93,8 +90,14 @@ operatorInput();
 // OPERATE EQUALS BUTTON LISTENER
 function calculate() {
     equalsBtn.addEventListener('click', () => {
-        finalOperation = operate(parseFloat(secondNumber), parseFloat(firstNumber), operatorSelection)
-        calculatorDisplay.textContent = finalOperation;
+        if (secondNumber === '') {
+            calculatorDisplay.textContent = 'Enter a number first';
+        } else {
+            finalOperation = operate(parseFloat(secondNumber), parseFloat(firstNumber), operatorSelection)
+            calculatorDisplay.textContent = finalOperation;
+            finalNumber = finalOperation.toString();
+        }
+        console.log(finalOperation)
     })
 };
 calculate();
