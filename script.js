@@ -18,15 +18,39 @@ let finalNumber = '';
 let operatorSelection = '';
 let operator = '';
 
+// OPERATIONS FUNCTIONS
+function addition(a, b) {
+    return parseFloat(a + b);
+}
+function substraction(a, b) {
+    return parseFloat(a - b);
+}
+function multiplication(a, b) {
+    return parseFloat(a * b);
+}
+function division(a, b) {
+    return parseFloat(a / b);
+}
+
+function operate(num1, num2, operator) {
+    if (operator === '+') {
+        return addition(num1, num2);
+    } else if (operator === '-') {
+        return substraction(num1, num2);
+    } else if (operator === '*') {
+        return multiplication(num1, num2);
+    } else if (operator === '/') {
+        return division(num1, num2);
+    }
+}
+
 // DISPLAY NUMBERS
 function displayInput() {
     numbersBtns.forEach((button) =>
         button.addEventListener('click', (e) => {
             numberBtnsValue = e.target.value;
             firstNumber += numberBtnsValue;
-            calculatorDisplay.textContent = parseFloat(firstNumber);
-            console.log('~ firstNumber', firstNumber);
-            console.log('~ secondNumber', secondNumber);
+            calculatorDisplay.textContent = firstNumber;
         })
     );
 }
@@ -53,32 +77,15 @@ function operatorInput() {
                 calculatorDisplay.textContent = 'Enter a number first';
             }
         })
-    );
+        );
 }
 operatorInput();
 
-// OPERATIONS FUNCTIONS
-function addition(a, b) {
-    return a + b;
-}
-function substraction(a, b) {
-    return a - b;
-}
-function multiplication(a, b) {
-    return a * b;
-}
-function division(a, b) {
-    return a / b;
-}
-
-function operate(num1, num2, operator) {
-    if (operator === '+') {
-        return addition(num1, num2);
-    } else if (operator === '-') {
-        return substraction(num1, num2);
-    } else if (operator === '*') {
-        return multiplication(num1, num2);
-    } else if (operator === '/') {
-        return division(num1, num2);
-    }
-}
+// OPERATE EQUALS
+function calculate() {
+    equalsBtn.addEventListener('click', () => {
+        finalOperation = operate(parseFloat(secondNumber), parseFloat(firstNumber), operatorSelection)
+        calculatorDisplay.textContent = finalOperation;
+    })
+};
+calculate();
