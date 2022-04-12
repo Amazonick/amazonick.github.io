@@ -17,6 +17,7 @@ let secondNumber = '';
 let finalNumber = '';
 let operatorSelection = '';
 let operator = '';
+let finalOperation = '';
 
 // OPERATIONS FUNCTIONS
 function addition(a, b) {
@@ -29,6 +30,9 @@ function multiplication(a, b) {
     return parseFloat(a * b);
 }
 function division(a, b) {
+    if (firstNumber === 0) {
+        return calculatorDisplay.textContent = 'You can\'t divide by zero bro. Haven\'t you learned that by now?'
+    } else
     return parseFloat(a / b);
 }
 
@@ -44,23 +48,26 @@ function operate(num1, num2, operator) {
     }
 }
 
-// DISPLAY NUMBERS
+// NUMBERS INPUT INTO DISPLAY
 function displayInput() {
     numbersBtns.forEach((button) =>
         button.addEventListener('click', (e) => {
-            numberBtnsValue = e.target.value;
+            numberBtnsValue = parseFloat(e.target.value);
             firstNumber += numberBtnsValue;
             calculatorDisplay.textContent = firstNumber;
+            console.log('button click secondNumber: ', secondNumber);
+            console.log('button click firstNumber: ', firstNumber);
         })
     );
 }
 displayInput();
 
-// CLEAR DISPLAY
+// CLEAR DISPLAY & VALUES
 function clearDisplay() {
     clearBtn.addEventListener('click', () => {
         calculatorDisplay.textContent = '';
         firstNumber = '';
+        secondNumber= '';
     });
 }
 clearDisplay();
@@ -73,15 +80,17 @@ function operatorInput() {
             calculatorDisplay.textContent = operatorSelection.toString();
             secondNumber = firstNumber;
             firstNumber = '';
+            console.log('operator secondNumber: ', secondNumber);
+            console.log('operator firstNumber: ', firstNumber);
             if (operatorSelection === '=' && secondNumber === '') {
-                calculatorDisplay.textContent = 'Enter a number first';
+                return calculatorDisplay.textContent = 'Enter a number first';
             }
         })
         );
 }
 operatorInput();
 
-// OPERATE EQUALS
+// OPERATE EQUALS BUTTON LISTENER
 function calculate() {
     equalsBtn.addEventListener('click', () => {
         finalOperation = operate(parseFloat(secondNumber), parseFloat(firstNumber), operatorSelection)
