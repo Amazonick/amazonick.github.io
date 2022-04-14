@@ -1,39 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 body {
-    font-family: 'Rajdhani', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(44, 43, 43)
+	font-family: 'Rajdhani', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(44, 43, 43);
 }
 
 .main-container {
-    margin: 20px;
-    padding: 40px;
-    background: rgb(114, 160, 126)
+	border-radius: 2em;
+	background: rgb(114, 160, 126);
 }
 
 .display {
-    display: flex;
-    height: 80px;
-    margin: 20px;
-    background-color: rgb(44, 43, 43);
-    direction: rtl;
-    font-size: 50px;
-    color: rgb(255, 255, 255)
+	display: flex;
+	height: 80px;
+	background-color: rgb(44, 43, 43);
+	border-radius: 10px;
+	direction: rtl;
+	font-size: 50px;
+	color: rgb(255, 255, 255);
 }
 
 #header-text {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
 }
 
 .container {
-    width: 300px;
-    background-color: rgb(255, 255, 255)
+    padding: 20px;
+	width: 300px;
+    border: 1em solid rgb(246, 255, 117);;
+    border-radius: 2em;
+    
+	background-color: rgb(114, 160, 126);
+}
+
+.controls {
+	margin-top: 20px;
+}
+
+#operator {
+    margin-bottom: 20px;
 }
