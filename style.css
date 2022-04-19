@@ -7,22 +7,22 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #1c3144;
+	background-color: #264653;
 }
 
 .main-container {
 	border-radius: 2em;
-	background: #3891a6;
+	background: #2a9d8f;
 }
 
 .display {
 	display: flex;
 	height: 80px;
-	background-color: #1c3144;
+	background-color: #264653;
 	border-radius: 10px;
-	border: solid 1px #44ffd2;
+	border: solid 1px #e9c46a;
 	direction: rtl;
-	font-size: 50px;
+	font-size: 4em;
 	color: rgb(255, 255, 255);
 }
 
@@ -36,7 +36,7 @@ body {
 .container {
 	padding: 20px;
 	width: 300px;
-	border: 1em solid #44ffd2;
+	border: 1em solid #e9c46a;
 	border-radius: 2em;
 }
 
@@ -60,7 +60,8 @@ body {
 .clear-btn,
 .equals-btn,
 .period-btn {
-	background-color: #44ffd2;
+	color: #264653;
+	background-color: #d9f2b4;
 	height: 2.5em;
 	width: 2.5em;
 	font: inherit;
@@ -75,7 +76,7 @@ body {
 .clear-btn:hover,
 .equals-btn:hover,
 .period-btn:hover {
-	background-color: #ff9505;
+	background-color: #e9c46a;
 }
 
 /* #equals {
