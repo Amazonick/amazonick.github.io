@@ -2,25 +2,25 @@
 
 body {
 	font-family: 'Rajdhani', sans-serif;
-	width: 100vw;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(44, 43, 43);
+	background-color: #1c3144;
 }
 
 .main-container {
 	border-radius: 2em;
-	background: rgb(114, 160, 126);
+	background: #3891a6;
 }
 
 .display {
 	display: flex;
 	height: 80px;
-	background-color: rgb(44, 43, 43);
+	background-color: #1c3144;
 	border-radius: 10px;
+	border: solid 1px #44ffd2;
 	direction: rtl;
 	font-size: 50px;
 	color: rgb(255, 255, 255);
@@ -30,14 +30,14 @@ body {
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
+	color: #1c3144;
 }
 
 .container {
 	padding: 20px;
 	width: 300px;
-	border: 1em solid rgb(246, 255, 117);
+	border: 1em solid #44ffd2;
 	border-radius: 2em;
-	background-color: rgb(26, 182, 182);
 }
 
 .controls {
@@ -47,65 +47,55 @@ body {
 	justify-content: flex-end;
 }
 
+#backspace,
 #clear-btn {
-    background-color: rgb(246, 255, 117);
-    height: 2.5em;
-    width: 5em;
-    font: inherit;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1em;
-    border-radius: 0.5em;
+	width: 250px;
+	height: 1.8em;
+	padding: 0em;
+	border-radius: 0.3em;
+}
+.backspace,
+.operator-btn,
+.number-btn,
+.clear-btn,
+.equals-btn,
+.period-btn {
+	background-color: #44ffd2;
+	height: 2.5em;
+	width: 2.5em;
+	font: inherit;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.8em;
+	border-radius: 0.4em;
+}
+.backspace:hover,
+.operator-btn:hover,
+.number-btn:hover,
+.clear-btn:hover,
+.equals-btn:hover,
+.period-btn:hover {
+	background-color: #ff9505;
 }
 
-.operator-btn {
-    background-color: rgb(246, 255, 117);
-    height: 2.5em;
-    width: 2.5em;
-    font: inherit;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5em;
-    border-radius: 0.5em;
-}
-
-#equals {
-    background-color: rgb(241, 219, 213);
-    height: 2.5em;
-    width: 2.5em;
-    font: inherit;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5em;
-    border-radius: 0.5em;
-}
+/* #equals {
+	background-color: #44ffd2;
+	height: 2.5em;
+	width: 2.5em;
+	font: inherit;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.5em;
+	border-radius: 0.5em;
+} */
 
 .sub-container {
-    display: flex;
-    margin: 0em;
-    padding: 0em;
+	display: flex;
+	margin: 0em;
+	padding: 0em;
 }
 
 .operators {
-    display: flex;
-    flex-direction: column;
-}
-
-.numbers-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    height: 300px;
-    flex-wrap: wrap;
-}
-
-.number-btn {
-    background-color: rgb(246, 255, 117);
-    height: 2.5em;
-    width: 2.5em;
-    font: inherit;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5em;
-    border-radius: 0.5em;
+	display: flex;
+	flex-direction: column;
 }
