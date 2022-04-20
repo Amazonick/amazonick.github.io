@@ -16,7 +16,6 @@ body {
 }
 
 .display {
-	display: flex;
 	height: 80px;
 	background-color: #264653;
 	border-radius: 10px;
@@ -44,15 +43,15 @@ body {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display: flex;
-	justify-content: flex-end;
+	align-items: stretch;
 }
 
 #backspace,
 #clear-btn {
-	width: 250px;
 	height: 1.8em;
 	padding: 0em;
 	border-radius: 0.3em;
+	flex: 1;
 }
 .backspace,
 .operator-btn,
@@ -79,17 +78,6 @@ body {
 	background-color: #e9c46a;
 }
 
-/* #equals {
-	background-color: #44ffd2;
-	height: 2.5em;
-	width: 2.5em;
-	font: inherit;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 1.5em;
-	border-radius: 0.5em;
-} */
-
 .sub-container {
 	display: flex;
 	margin: 0em;
@@ -99,4 +87,8 @@ body {
 .operators {
 	display: flex;
 	flex-direction: column;
+}
+
+.numbers-container {
+	flex: 1;
 }
