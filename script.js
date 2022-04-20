@@ -65,13 +65,13 @@ console.log('~ firstNumber:', firstNumber);
 
 // CLEAR DISPLAY & VALUES
 function clearDisplay() {
-	clearBtn.addEventListener('click', () => {
-		calculatorDisplay.innerHTML = '';
-		firstNumber = '';
-		secondNumber = '';
-	});
+	calculatorDisplay.innerHTML = '';
+	firstNumber = '';
+	secondNumber = '';
 }
-clearDisplay();
+clearBtn.addEventListener('click', () => {
+	clearDisplay();
+});
 
 // OPERATORS CLICK LISTENERS
 function operatorInputClickListener() {
