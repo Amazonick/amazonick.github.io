@@ -4,7 +4,6 @@ body {
 	font-family: 'Rajdhani', sans-serif;
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: #264653;
@@ -21,8 +20,9 @@ body {
 	border-radius: 10px;
 	border: solid 1px #e9c46a;
 	direction: rtl;
-	font-size: 4em;
+	font-size: 3.9em;
 	color: rgb(255, 255, 255);
+	padding-right: 4px;
 	box-shadow: inset 0px 0px 20px 5px rgba(134, 139, 51, 0.3);
 }
 
@@ -54,6 +54,7 @@ body {
 	border-radius: 0.3em;
 	flex: 1;
 }
+
 .backspace,
 .operator-btn,
 .number-btn,
@@ -70,6 +71,7 @@ body {
 	font-size: 1.8em;
 	border-radius: 0.4em;
 }
+
 .backspace:hover,
 .operator-btn:hover,
 .number-btn:hover,
