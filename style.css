@@ -30,7 +30,8 @@ body {
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
-	color: #1c3144;
+	color: #1c2c44;
+	margin-top: 0px;
 }
 
 .container {
