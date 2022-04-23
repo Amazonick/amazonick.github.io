@@ -35,8 +35,8 @@ body {
 	justify-content: center;
 	text-transform: uppercase;
 	color: #e9c46a;
-	text-shadow: 0px -1px 0px #9b8348, 1px 0px 0px #9b8348;
-	margin-top: 0px;
+	text-shadow: 0px -1px 0px #0e0b06, 1px 0px 0px #9b8348;
+	margin: 0px 0px 20px;
 }
 
 .container {
