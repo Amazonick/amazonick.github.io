@@ -66,7 +66,7 @@ function clickHandler() {
 	} else if (result !== '') {
 		operate(result, currentNumber, operation);
 		currentNumber = '';
-		return previousNumber;
+		return result;
 	}
 	console.log('~ currentNumber', currentNumber);
 	console.log('~ previousNumber', previousNumber);
