@@ -12,92 +12,87 @@ const equalsBtn = document.getElementById('equals');
 const numbersBtns = document.querySelectorAll('.number-btn');
 const clearBtn = document.getElementById('clear-btn');
 let numberBtnsValue;
+let operatorBtnsValue;
 let firstNumber = '';
 let secondNumber = '';
 let finalNumber = '';
-let operatorSelection = '';
-let operator = '';
-let finalOperation = '';
+let operatorSelection;
+let operator;
+let finalOperation;
 
 // OPERATIONS FUNCTIONS
 function addition(a, b) {
-    return parseFloat(a + b);
+	return parseFloat(a) + parseFloat(b);
 }
 function substraction(a, b) {
-    return parseFloat(a - b);
+	return parseFloat(a) - parseFloat(b);
 }
 function multiplication(a, b) {
-    return parseFloat(a * b);
+	return parseFloat(a) * parseFloat(b);
 }
 function division(a, b) {
-    if (firstNumber === 0) {
-        calculatorDisplay.textContent = 'You can\'t divide by zero bro. Haven\'t you learned that by now?'
-    } else
-    return parseFloat(a / b);
+	if (b == 0) {
+		return "Can't devide by zero.";
+	} else return parseFloat(a) / parseFloat(b);
 }
 
 function operate(num1, num2, operator) {
-    if (operator === '+') {
-        return addition(num1, num2);
-    } else if (operator === '-') {
-        return substraction(num1, num2);
-    } else if (operator === '*') {
-        return multiplication(num1, num2);
-    } else if (operator === '/') {
-        return division(num1, num2);
-    }
+	if (operator === '+') {
+		return addition(num1, num2);
+	} else if (operator === '-') {
+		return substraction(num1, num2);
+	} else if (operator === '*') {
+		return multiplication(num1, num2);
+	} else if (operator === '/') {
+		return division(num1, num2);
+	}
 }
 
 // NUMBERS INPUT INTO DISPLAY
 function displayInput() {
-    numbersBtns.forEach((button) =>
-        button.addEventListener('click', (e) => {
-            numberBtnsValue = parseFloat(e.target.value);
-            firstNumber += numberBtnsValue;
-            calculatorDisplay.textContent = firstNumber;
-            console.log('button click secondNumber: ', secondNumber);
-            console.log('button click firstNumber: ', firstNumber);
-        })
-    );
+	numbersBtns.forEach(button =>
+		button.addEventListener('click', e => {
+			numberBtnsValue = e.target.value;
+			firstNumber += numberBtnsValue;
+			calculatorDisplay.innerHTML = firstNumber;
+			console.log('~ firstNumber', firstNumber);
+			return parseFloat(firstNumber);
+		})
+	);
 }
 displayInput();
+console.log('~ firstNumber:', firstNumber);
 
 // CLEAR DISPLAY & VALUES
 function clearDisplay() {
-    clearBtn.addEventListener('click', () => {
-        calculatorDisplay.textContent = '';
-        firstNumber = '';
-        secondNumber= '';
-    });
+	calculatorDisplay.innerHTML = '';
+	firstNumber = '';
+	secondNumber = '';
 }
-clearDisplay();
+clearBtn.addEventListener('click', () => {
+	clearDisplay();
+});
 
 // OPERATORS CLICK LISTENERS
-function operatorInput() {
-    operatorBtns.forEach((button) =>
-        button.addEventListener('click', (e) => {
-            operatorSelection = e.target.textContent;
-            calculatorDisplay.textContent = operatorSelection.toString();
-            secondNumber = firstNumber;
-            firstNumber = '';
-            console.log('operator secondNumber: ', secondNumber);
-            console.log('operator firstNumber: ', firstNumber);
-        })
-        );
+function operatorInputClickListener() {
+	operatorBtns.forEach(button => {
+		button.addEventListener('click', e => {
+			operatorBtnsValue = e.target.value;
+			calculatorDisplay.innerHTML = operatorBtnsValue;
+			if (firstNumber !== '') {
+				secondNumber = firstNumber;
+				firstNumber = '';
+			}
+			if (secondNumber !== '') {
+				operate(secondNumber, firstNumber, operatorBtnsValue);
+				calculatorDisplay.innerHTML = finalNumber;
+				console.log('~ finalNumber', finalNumber);
+			}
+			console.log('~ operator:', operatorBtnsValue);
+			console.log('~ firstNumber', firstNumber);
+			console.log('~ secondNumber', secondNumber);
+			return operator;
+		});
+	});
 }
-operatorInput();
-
-// OPERATE EQUALS BUTTON LISTENER
-function calculate() {
-    equalsBtn.addEventListener('click', () => {
-        if (secondNumber === '') {
-            calculatorDisplay.textContent = 'Enter a number first';
-        } else {
-            finalOperation = operate(parseFloat(secondNumber), parseFloat(firstNumber), operatorSelection)
-            calculatorDisplay.textContent = finalOperation;
-            finalNumber = finalOperation.toString();
-        }
-        console.log(finalOperation)
-    })
-};
-calculate();
+operatorInputClickListener();
