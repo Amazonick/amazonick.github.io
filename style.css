@@ -1,39 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 body {
-    font-family: 'Rajdhani', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(44, 43, 43)
+	font-family: 'Rajdhani', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(44, 43, 43);
 }
 
 .main-container {
-    margin: 20px;
-    padding: 40px;
-    background: rgb(114, 160, 126)
+	border-radius: 2em;
+	background: rgb(114, 160, 126);
 }
 
 .display {
-    display: flex;
-    height: 80px;
-    margin: 20px;
-    background-color: rgb(44, 43, 43);
-    direction: rtl;
-    font-size: 50px;
-    color: rgb(255, 255, 255)
+	display: flex;
+	height: 80px;
+	background-color: rgb(44, 43, 43);
+	border-radius: 10px;
+	direction: rtl;
+	font-size: 50px;
+	color: rgb(255, 255, 255);
 }
 
 #header-text {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
 }
 
 .container {
-    width: 300px;
-    background-color: rgb(255, 255, 255)
+	padding: 20px;
+	width: 300px;
+	border: 1em solid rgb(246, 255, 117);
+	border-radius: 2em;
+	background-color: rgb(26, 182, 182);
+}
+
+.controls {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#clear-btn {
+    background-color: rgb(246, 255, 117);
+    height: 2.5em;
+    width: 5em;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 0.5em;
+}
+
+.operator-btn {
+    background-color: rgb(246, 255, 117);
+    height: 2.5em;
+    width: 2.5em;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+}
+
+#equals {
+    background-color: rgb(241, 219, 213);
+    height: 2.5em;
+    width: 2.5em;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+}
+
+.sub-container {
+    display: flex;
+    margin: 0em;
+    padding: 0em;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.number-btn {
+    background-color: rgb(246, 255, 117);
+    height: 2.5em;
+    width: 2.5em;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 0.5em;
 }
